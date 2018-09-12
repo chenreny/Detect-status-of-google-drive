@@ -5,6 +5,9 @@ Detect the internet status and tell you whehther google drive is up or down
 <br>If the icon shows red light: Google drive is down
 <br>If the icon shows yellow light:Local internet connection is broken 
 <br>If the icon shows green light: Google drive is up
+<br> Click on the button "Go to Google Drive" to go directly to your google drive
+<br> Click on the button "Export Log History " to export CSV file 
+
 
 ## Getting Started
 
