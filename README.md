@@ -30,6 +30,14 @@ Working Google chrome
 <img src="/img/popupscreenshot.png"  width="300" height="400" />
 
 
+### Testing and Exploring
+
+You can download the source code and debug it on your 
+
+```
+Give an example
+```
+
 
 
 
