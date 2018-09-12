@@ -25,8 +25,8 @@ Working Google chrome
 
 
 ## Preview
+![](/img/popupscreenshot.png | width=100)
 
-<img height= 20% src="/img/popupscreenshot.png" />
 
 ### Break down into end to end tests
 
