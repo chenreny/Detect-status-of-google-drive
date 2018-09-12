@@ -38,6 +38,8 @@ First open your terminal and type the following command(without $)
 ```
 $git clone https://github.com/chenreny/Detect-status-of-google-drive.git
 ```
+<br>
+Navigate to your Chrome and click on the button at the top right 
 
 
 
