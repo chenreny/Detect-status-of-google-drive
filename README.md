@@ -34,10 +34,11 @@ Working Google chrome
 
 You can download the source code and debug it on your PC
 
+First open your terminal and type the following command(without $)
 ```
-Give an examp
+$git clone https://github.com/chenreny/Detect-status-of-google-drive.git
 ```
 
-$git clone https://github.com/chenreny/Detect-status-of-google-drive.git
+
 
 
