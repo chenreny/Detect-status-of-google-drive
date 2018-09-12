@@ -39,6 +39,7 @@ First open your terminal and type the following command(without $)
 $git clone https://github.com/chenreny/Detect-status-of-google-drive.git
 ```
 Then navigate to your Chrome and click on the button at the top right 
+<br> <img src="/img/instruction.png"  width="200" height="200" />
 <br> Go to Settings -> Extensions -> Load Unpacked (Be sure to open Developer Mode)
 
 
