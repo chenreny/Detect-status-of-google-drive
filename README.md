@@ -1,7 +1,7 @@
 # GOOGLE DRIVE Traffic Signal
 
-detect the internet status and tell you whehther google drive is up or down
-Red light: The user is not signed in
+Detect the internet status and tell you whehther google drive is up or down
+<br>Red light: The user is not signed in
 Red light: Google drive is down
 Yellow light: Local internet connection
 Green light: Google drive is up
