@@ -16,7 +16,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Give examples
+Working Google chrome
 ```
 
 ### Installing
@@ -26,7 +26,7 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
-Give the example
+Clike <li><a href="https://chrome.google.com/webstore/detail/google-drive-traffic-sign/geghjeinomfmkmkomcmblapajechpili?hl=en">This</a></li>
 ```
 
 And repeat
