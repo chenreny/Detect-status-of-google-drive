@@ -24,9 +24,9 @@ Working Google chrome
 * [Click this](https://chrome.google.com/webstore/detail/google-drive-traffic-sign/geghjeinomfmkmkomcmblapajechpili?hl=en) - Add the extension to your chrome
 
 
-## Running the tests
+## Preview
 
-Explain how to run the automated tests for this system
+<img src="/img/popup.png"  alt="Frog"/>
 
 ### Break down into end to end tests
 
