@@ -26,7 +26,7 @@ Working Google chrome
 
 ## Preview
 
-<img src="/img/popup.png"  alt="Frog"/>
+<img src="/img/popupscreenshot.png" />
 
 ### Break down into end to end tests
 
