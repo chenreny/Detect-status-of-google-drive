@@ -32,7 +32,7 @@ Working Google chrome
 
 ### Testing and Exploring
 
-You can download the source code and debug it on your 
+You can download the source code and debug it on your PC
 
 ```
 Give an example
