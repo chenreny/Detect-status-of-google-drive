@@ -41,6 +41,6 @@ $git clone https://github.com/chenreny/Detect-status-of-google-drive.git
 Then navigate to your Chrome and click on the button at the top right 
 <br> <img src="/img/instruction.png"  width="200" height="200" />
 <br> Go to Settings -> Extensions -> Load Unpacked (Be sure to open Developer Mode)
-
+<br> Then you can click on "background page" and debug on your own!
 
 
