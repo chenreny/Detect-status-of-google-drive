@@ -1,4 +1,4 @@
-# GOOGLE DRIVE Traffic Signal
+# Google Drive Traffic Signal
 
 Detect the internet status and tell you whehther google drive is up or down
 <br>If the icon shows grey light: The user is not signed in
