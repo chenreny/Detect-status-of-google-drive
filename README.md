@@ -26,7 +26,7 @@ Working Google chrome
 
 ## Preview
 
-<img src="/img/popupscreenshot.png" />
+<img height= 20% src="/img/popupscreenshot.png" />
 
 ### Break down into end to end tests
 
