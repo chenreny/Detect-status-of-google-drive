@@ -35,9 +35,9 @@ Working Google chrome
 You can download the source code and debug it on your PC
 
 ```
-Give an example
+Give an examp
 ```
 
-
+$git clone https://github.com/chenreny/Detect-status-of-google-drive.git
 
 
