@@ -1,6 +1,6 @@
 # Google Drive Traffic Signal
 
-Detect the internet status and tell you whehther google drive is up or down
+This google extension aims to detect the internet status and tell you whehther google drive is up or down
 <br>If the icon shows grey light: The user is not signed in
 <br>If the icon shows red light: Google drive is down
 <br>If the icon shows yellow light:Local internet connection is broken 
