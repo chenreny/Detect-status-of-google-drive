@@ -21,18 +21,7 @@ Working Google chrome
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Clike <a href="https://chrome.google.com/webstore/detail/google-drive-traffic-sign/geghjeinomfmkmkomcmblapajechpili?hl=en">This</a>
-[I'm an inline-style link](https://www.google.com)
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-```
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-
-And repeat
+* [Click this](https://chrome.google.com/webstore/detail/google-drive-traffic-sign/geghjeinomfmkmkomcmblapajechpili?hl=en) - Add the extension to your google chrome
 
 ```
 until finished
