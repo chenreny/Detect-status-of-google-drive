@@ -28,7 +28,9 @@ Say what the step will be
 ```
 Clike <a href="https://chrome.google.com/webstore/detail/google-drive-traffic-sign/geghjeinomfmkmkomcmblapajechpili?hl=en">This</a>
 [I'm an inline-style link](https://www.google.com)
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 ```
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 
 And repeat
 
