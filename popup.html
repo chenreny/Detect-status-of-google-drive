@@ -72,23 +72,25 @@
 
 <body>
     <p style="width:270px">
-        Google Drive Traffic Signal (Version 7.0) 08/14/2018
+        <b>Google Drive Traffic Signal</b> (v10.0) 09/08/2018<br/>
+        <small>Note: This extension operates only when internet is up and user is signed into Chrome<br/>
+        Message provided at user sign in/out or internet/Google Drive status change</small>
     </p>
 
     <p style="width:270px;height:8px">
-        <img src="img/grey.png" alt="Red light:" style="width:16px;height:16px;"> The user is not signed in
+        <img src="img/grey.png" alt="Red light:" style="width:16px;height:16px;"> The user needs to sign into Chrome
     </p>
 
     <p style="width:270px;height:8px">
-        <img src="img/red.png" alt="Red light:" style="width:16px;height:16px;"> Google drive is down
+        <img src="img/red.png" alt="Red light:" style="width:16px;height:16px;"> Google Drive is down
     </p>
 
     <p style="width:270px;height:8px">
-        <img src="img/yellow.png" alt="Yellow light:" style="width:16px;height:16px;"> Local internet connection
+        <img src="img/yellow.png" alt="Yellow light:" style="width:16px;height:16px;"> Internet is offline
     </p>
 
     <p style="width:270px;height:8px">
-        <img src="img/green.png" alt="Green light:" style="width:16px;height:16px;"> Google drive is up
+        <img src="img/green.png" alt="Green light:" style="width:16px;height:16px;"> Google Drive is up
     </p>
 
     <p style="height:5px"></p>
@@ -110,8 +112,7 @@
     <p></p>
 
     <button class="popup" id="POPUP" style="text-align:center">About
-        <span class="popuptext" id="myPopup">Developers: Yiwei Zhang, Tianji Cong, Renying Chen, Jiru Wang, IMLC, CSE Dept.,
-            U of Michigan</span>
+        <span class="popuptext" id="myPopup">Developers: <a id="Yiwei">Yiwei Zhang</a>, <a id="Tianji">Tianji Cong</a>, <a id="Renying">Renying Chen</a>, <a id="imlc">IMLC</a>, CSE Dept., U of Michigan</span>
     </button>
 
     <script type="text/javascript" src="popup.js"></script>
