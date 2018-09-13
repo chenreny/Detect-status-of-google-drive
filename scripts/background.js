@@ -1,4 +1,4 @@
-var signed_in = false;
+var signed_in;
 var google_drive_flag = true;
 var logged_out_flag = false;
 
@@ -125,8 +125,9 @@ chrome.runtime.onInstalled.addListener(function (callback) {
 
 
 var flag = true; // for internet connection
-var trueCondition;
+var true_condition;
 var prev_condition = "grey";
+var prev_signed_in = false;
 
 var HttpClient = function () {
     this.get = function (aUrl, aCallback) {
@@ -166,13 +167,14 @@ function timeStamp() {
 function addToLog(message) {
     chrome.storage.local.get(['log'], function (result) {
         var arr = result['log'];
-        if (arr.length === 10) {
+        if (arr.length === 100) {
             arr.shift();
             arr.push(message);
         }
-        else if (arr.length < 10) {
+        else if (arr.length < 100) {
             arr.push(message);
         }
+        // arr.push(message);
         chrome.storage.local.set({ 'log': arr });
     });
 }
@@ -188,32 +190,43 @@ chrome.storage.local.get(['log'], function (result) {
         client.get('http://www.google.com', function (response) {
             if (response === 200) {
                 console.log("internet success");
-                console.log("sign in ", signed_in);
+                // console.log("sign in ", signed_in);
                 flag = true;
             } else {
                 flag = false;
             }
         });
         if (flag === false) {
-            trueCondition = "yellow";
-            if (trueCondition !== prev_condition) {
+            true_condition = "yellow";
+            if (true_condition !== prev_condition) {
                 var message = "Internet offline at: ";
                 message += timeStamp();
                 console.log(message);
                 addToLog(message);
             }
-            prev_condition = trueCondition;
+            prev_condition = true_condition;
         } else {
             chrome.identity.getAuthToken({ interactive: false }, function (token) {
                 if (!token) {
-                    //use this to detect whether user is offline by setting a new flag
-                    //if logged_out_flag is true, even though setinterval is working, nothing will pop up
-                    //the program works again when user click on sign in button
                     if (chrome.runtime.lastError.message.match(/not signed in/)) {
                         console.log("not signed in");
                         signed_in = false;
                         logged_out_flag = true;
                         chrome.storage.local.set({'sign_in': signed_in});
+                        prev_signed_in = signed_in;
+                    } else {
+                        console.log("user is signed in");
+                        signed_in = true;
+                        google_drive_api(token); // if user is logged in, send api to check google drive
+                        logged_out_flag = false;
+                        chrome.storage.local.set({'sign_in': signed_in});
+                        if (signed_in !== prev_signed_in) {
+                            var message = "User signed in at: ";
+                            message += timeStamp();
+                            console.log(message);
+                            addToLog(message);
+                        }
+                        prev_signed_in = signed_in;
                     }
                 }
                 else {
@@ -221,40 +234,49 @@ chrome.storage.local.get(['log'], function (result) {
                     signed_in = true;
                     logged_out_flag = false;
                     chrome.storage.local.set({'sign_in': signed_in});
+                    if (signed_in !== prev_signed_in) {
+                        var message = "User signed in at: ";
+                        message += timeStamp();
+                        console.log(message);
+                        addToLog(message);
+                    }
+                    prev_signed_in = signed_in;
                 }
             });
 
             if (logged_out_flag === true) {
-                trueCondition = "grey";
-                if (trueCondition !== prev_condition) {
-                    var message = "User is logged out at: ";
+                true_condition = "grey";
+                if (true_condition !== prev_condition) {
+                    var message = "User logged out at: ";
                     message += timeStamp();
                     console.log(message);
                     addToLog(message);
                 }
-                prev_condition = trueCondition;
+                prev_condition = true_condition;
             }
 
-            else if (google_drive_flag === true) {
-                trueCondition = "green";
-                if (trueCondition !== prev_condition) {
-                    var message = "Google drive is up at: ";
-                    message += timeStamp();
-                    console.log(message);
-                    addToLog(message);
+            else {
+                if (google_drive_flag === true) {
+                    true_condition = "green";
+                    if (true_condition !== prev_condition) {
+                        var message = "Google Drive is up at: ";
+                        message += timeStamp();
+                        console.log(message);
+                        addToLog(message);
+                    }
+                    prev_condition = true_condition;
+                } else {
+                    true_condition = "red";
+                    if (true_condition !== prev_condition) {
+                        var message = "Google Drive is down at: ";
+                        message += timeStamp();
+                        console.log(message);
+                        addToLog(message);
+                    }
+                    prev_condition = true_condition;
                 }
-                prev_condition = trueCondition;
-            } else {
-                trueCondition = "red";
-                if (trueCondition !== prev_condition) {
-                    var message = "Google drive is down at: ";
-                    message += timeStamp();
-                    console.log(message);
-                    addToLog(message);
-                }
-                prev_condition = trueCondition;
             }
         }
-        chrome.browserAction.setIcon({ path: "img/" + trueCondition + ".png" });
+        chrome.browserAction.setIcon({ path: "img/" + true_condition + ".png" });
     }, 1000);
 });
