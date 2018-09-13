@@ -45,6 +45,22 @@ window.onload = function () {
 		window.open("https://drive.google.com/drive/my-drive");
 	});
 
+	document.getElementById('Yiwei').addEventListener('click', function () {
+		window.open("https://www.linkedin.com/in/yiwei-zhang-177025154/");
+	});
+
+	document.getElementById('Tianji').addEventListener('click', function () {
+		window.open("https://www.linkedin.com/in/tianji-cong-320659160/");
+	});
+
+	document.getElementById('Renying').addEventListener('click', function () {
+		window.open("https://www.linkedin.com/in/renying-chen-237389156/");
+	});
+
+	document.getElementById('imlc').addEventListener('click', function () {
+		window.open("https://www.imlc.io");
+	});
+
 	chrome.storage.local.get(['sign_in'], function (result) {
 		if (result['sign_in'] === false) {
 			//console.log("click sign in button");
@@ -67,9 +83,11 @@ window.onload = function () {
 	chrome.storage.local.get(['log'], function (result) {
 		console.log(result['log']);
 		var i;
-		var length = Math.min(result['log'].length, 10);
+		//var length = Math.min(result['log'].length, 10);
+		var length = result['log'].length;
+		var start = Math.max(0, length - 10);
 
-		for (i = 0; i < length; i++) {
+		for (i = start; i < length; i++) {
 			document.getElementById('log').innerHTML += "<p>"
 			document.getElementById('log').innerHTML += result['log'][i];
 			document.getElementById('log').innerHTML += "</p>"
@@ -81,6 +99,8 @@ window.onload = function () {
 		})
 	});
 };
+
+
 
 
 
